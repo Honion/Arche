@@ -1,0 +1,61 @@
+# Project: Arche
+# Makefile created by Dev-C++ 5.8.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Administrateur.o Systeme.o Url.o Cours.o Devoir.o Eleve.o Enseignant.o Fichier.o IPersonne.o IRessource.o Main.o Note.o
+LINKOBJ  = Administrateur.o Systeme.o Url.o Cours.o Devoir.o Eleve.o Enseignant.o Fichier.o IPersonne.o IRessource.o Main.o Note.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -mwindows
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
+BIN      = Arche.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Administrateur.o: Administrateur.cpp
+	$(CPP) -c Administrateur.cpp -o Administrateur.o $(CXXFLAGS)
+
+Systeme.o: Systeme.cpp
+	$(CPP) -c Systeme.cpp -o Systeme.o $(CXXFLAGS)
+
+Url.o: Url.cpp
+	$(CPP) -c Url.cpp -o Url.o $(CXXFLAGS)
+
+Cours.o: Cours.cpp
+	$(CPP) -c Cours.cpp -o Cours.o $(CXXFLAGS)
+
+Devoir.o: Devoir.cpp
+	$(CPP) -c Devoir.cpp -o Devoir.o $(CXXFLAGS)
+
+Eleve.o: Eleve.cpp
+	$(CPP) -c Eleve.cpp -o Eleve.o $(CXXFLAGS)
+
+Enseignant.o: Enseignant.cpp
+	$(CPP) -c Enseignant.cpp -o Enseignant.o $(CXXFLAGS)
+
+Fichier.o: Fichier.cpp
+	$(CPP) -c Fichier.cpp -o Fichier.o $(CXXFLAGS)
+
+IPersonne.o: IPersonne.cpp
+	$(CPP) -c IPersonne.cpp -o IPersonne.o $(CXXFLAGS)
+
+IRessource.o: IRessource.cpp
+	$(CPP) -c IRessource.cpp -o IRessource.o $(CXXFLAGS)
+
+Main.o: Main.cpp
+	$(CPP) -c Main.cpp -o Main.o $(CXXFLAGS)
+
+Note.o: Note.cpp
+	$(CPP) -c Note.cpp -o Note.o $(CXXFLAGS)

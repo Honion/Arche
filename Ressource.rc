@@ -1,0 +1,26 @@
+#include <windows.h>
+#include "constantes.h"
+
+icone1 ICON "Icones/icone.ico"
+ID_MENU MENU
+BEGIN
+    POPUP "Actions"
+    BEGIN
+        MENUITEM "Parler", ID_B_PARLER
+        MENUITEM SEPARATOR
+        MENUITEM "Quitter", ID_B_QUITTER
+    END
+    POPUP "Aide"
+    BEGIN
+        MENUITEM "A propos", ID_B_APROPOS
+    END
+END
+APROPOS DIALOG
+    CW_USEDEFAULT, CW_USEDEFAULT, 280, 120
+        CAPTION "Titre"
+        STYLE WS_OVERLAPPEDWINDOW
+BEGIN
+    DEFPUSHBUTTON "Ok", IDOK, 76, 90, 42, 12
+    ICON icone1, -1, 30, 50, 32, 32
+    LTEXT "Arche a été developpé par HONION, VOISIN et TRANG QUANG", -1, 60, 38, 200, 10
+END
