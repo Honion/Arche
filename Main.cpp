@@ -39,6 +39,7 @@ LPSTR lignesDeCommande, int modeDAffichage)
     classeFenetre.hIcon = LoadIcon(NULL, IDI_APPLICATION);
     classeFenetre.hCursor = LoadCursor(NULL, IDC_ARROW);
     classeFenetre.hbrBackground = (HBRUSH)(1 + COLOR_BTNFACE);
+    classeFenetre.hbrBackground = (HBRUSH)GetStockObject(GRAY_BRUSH);
     classeFenetre.lpszMenuName = NULL;
     classeFenetre.lpszClassName = "classeF";
     // On prévoit quand même le cas où ça échoue
@@ -59,14 +60,21 @@ LPSTR lignesDeCommande, int modeDAffichage)
 LRESULT CALLBACK procedureFenetrePrincipale(HWND fenetrePrincipale, UINT message, WPARAM wParam, LPARAM lParam)
 {
     static HWND boutons[2] = {NULL};
+    HWND hWndEdit[2];
     switch (message)
     {
         case WM_CREATE:
                // hEdit[0]=afficheEditUneLigne(fenetrePrincipale);
                 boutons[0] = CreateWindow("BUTTON", "Connexion", WS_CHILD | WS_VISIBLE,
-        100, 100, 100, 100, fenetrePrincipale, (HMENU)ID_B_PARLER, instance, NULL);
+        						800, 550, 320, 30, fenetrePrincipale, (HMENU)ID_B_PARLER, instance, NULL);
                 boutons[1] = CreateWindow("BUTTON", "Quitter Arche", WS_CHILD | WS_VISIBLE,
-        5, 45, 383, 30, fenetrePrincipale, (HMENU)ID_B_QUITTER, instance, NULL);
+       							 800, 630, 320, 30, fenetrePrincipale, (HMENU)ID_B_QUITTER, instance, NULL);
+        	    hWndEdit[0] =  CreateWindowEx(WS_EX_CLIENTEDGE, TEXT("Edit"), TEXT("Identifiant"),
+                               WS_CHILD | WS_VISIBLE, 880, 430, 150,
+                               30, fenetrePrincipale, NULL, NULL, NULL);
+            	hWndEdit[1] =  CreateWindowEx(WS_EX_CLIENTEDGE, TEXT("Edit"), TEXT("Mot de Passe"),
+                               WS_CHILD | WS_VISIBLE, 880, 480, 150,
+                               30, fenetrePrincipale, NULL, NULL, NULL);
             return 0;
         case WM_COMMAND:
             switch(LOWORD(wParam))
@@ -85,10 +93,66 @@ LRESULT CALLBACK procedureFenetrePrincipale(HWND fenetrePrincipale, UINT message
         case WM_DESTROY:
             PostQuitMessage(0);
             return 0;
+        
+        case WM_PAINT :
+        	{
+        	  HBRUSH hbRed, hbGreen, hbrOld;
+              HPEN hp2px, hpOld;
+              HFONT NewFont, OldFont;
+              LOGFONT lf;
+
+              char st[] = "ARCHE UNIVERSITE" ;
+
+              PAINTSTRUCT ps;
+              HDC hdc = BeginPaint(fenetrePrincipale, &ps);
+              SetBkMode(hdc, TRANSPARENT);
+
+             // Rectangle(hdc, 20, 60, 120, 100);
+
+            //  hp2px = CreatePen(PS_SOLID, 2, 0x00FF0000);
+             // hpOld = SelectObject(hdc,hp2px);
+
+            //  hbRed = CreateSolidBrush(0x000000FF);
+             // hbrOld = SelectObject(hdc,hbRed);
+
+              Rectangle(hdc, 160, 60, 260, 100);
+
+             // hbGreen = CreateHatchBrush(HS_DIAGCROSS, 0x0000BB00);
+             // SelectObject(hdc,hbGreen);
+             // DeleteObject(hbRed);
+
+            //  Ellipse(hdc, 300, 20, 400, 120);
+
+              MoveToEx(hdc, 780, 400, NULL);
+              LineTo(hdc, 1130, 400);
+              
+              MoveToEx(hdc, 780, 700, NULL);
+              LineTo(hdc, 1130, 700);
+
+             // SelectObject(hdc,hbrOld);
+            //  DeleteObject(hbGreen);
+
+            //  SelectObject(hdc,hpOld);
+            //  DeleteObject(hp2px);
+
+
+             // NewFont = CreateFontIndirect(&lf);
+             // OldFont = SelectObject(hdc,NewFont);
+
+              SetTextColor(hdc, 0x000000FF);
+              TextOut(hdc, 880, 180, st, lstrlen(st));
+
+            //  SelectObject(hdc,OldFont);
+           //   DeleteObject(NewFont);
+
+              EndPaint(fenetrePrincipale, &ps);
+              return 0;
+			}
         default:
             return DefWindowProc(fenetrePrincipale, message, wParam, lParam);
     }
 }
+
 BOOL APIENTRY aPropos_procedure(HWND boiteDeDialogue,UINT message,WPARAM wParam,LPARAM lParam)
 {
     switch (message)
