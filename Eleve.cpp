@@ -7,6 +7,7 @@ using namespace std;
 std::string Identifiant;
 std::string Mdp;
 std::vector<Cours> liste_cours;
+std::vector<Cours> liste_cours_ouvert;
 
   vector<Cours> Eleve::getCoursOuvert()
   {             
@@ -60,7 +61,7 @@ std::vector<Cours> liste_cours;
 		  }
 		  
           void ajouterCoursOuvert(Cours cours){
-          	
+          	liste_cours_ouvert.push_back(cours);
 		  }
 		  
           void supprimerCoursOuvert(Cours cours){
