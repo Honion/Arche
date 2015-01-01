@@ -53,6 +53,7 @@ using namespace std;
       
       vector<Cours> Systeme::getCoursEnAttente()
       {
+                 return cours_attente;
       }
       
       void Systeme::ajouterCours(Cours cours)
