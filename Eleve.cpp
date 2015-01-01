@@ -1,7 +1,11 @@
+#include<string>
+#include<list>
+#include<iostream>
 #include "Eleve.h"
 #include "Cours.h"
 #include "Note.h"
 #include <vector>
+#include<string>
 
 using namespace std;
 std::string Identifiant;
