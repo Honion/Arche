@@ -1,7 +1,11 @@
-#ifndef __ENSEIGNANT_H__
-#define __ENSEIGNANT_H__
+#include<string>
+#include<list>
+#include<iostream>
 #include "Cours.h"
 #include "IPersonne.h"
+#include <vector>
+#include<string>
+
 
 using namespace std;
 std::string Identifiant;
