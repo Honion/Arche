@@ -6,32 +6,29 @@
 #include <ctime>
 
 using namespace std;
-std::string Titre;
-std::string Enonce;
-time_t DateLimite;
 
 
-           	void setEnonce(std::string enonce){
+           	void Devoir::setEnonce(std::string enonce){
            		Enonce = enonce;
 			   }
 			   
-             void setTitre(std::string titre){
+             void Devoir::setTitre(std::string titre){
              	Titre = titre;
 			 }
 			 
-             std::string getTitre(){
+             std::string Devoir::getTitre(){
              	return Titre;
 			 }
 			 
-             std::string getEnonce(){
+             std::string Devoir::getEnonce(){
              	return Enonce;             	
 			 }
 			 
-             time_t getDate(){
+             time_t Devoir::getDate(){
              	return DateLimite;
 			 }
 			 
-             void setDate(time_t date){
+             void Devoir::setDate(time_t date){
              	DateLimite = date;
 			 }
              

@@ -5,22 +5,20 @@
 
 
 using namespace std; 
- std::string Titre;
- std::string Adresse;
  
  
-  				void setAdresse(std::string adresse){
+  				void Url::setAdresse(std::string adresse){
   					Adresse=adresse;
   				}
   
-            	void setTitre(std::string titre){
+            	void Url::setTitre(std::string titre){
              		 Titre=titre;
 			 	}
 			 	
-             	std::string getTitre(){
+             	std::string Url::getTitre(){
              		return Titre;
 			 	}
 			 	
-             	std::string getAdresse(){
+             	std::string Url::getAdresse(){
              		return Adresse;
 			 	}

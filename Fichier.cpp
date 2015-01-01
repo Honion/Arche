@@ -5,23 +5,22 @@
 #include<string>
 
 using namespace std;
-std::string Titre;
-std::string Corps;
 
 
-             void setCorps(std::string corps){
+
+             void Fichier::setCorps(std::string corps){
              	Corps = corps;
 			 }
 			 
-             void setTitre(std::string titre){
+             void Fichier::setTitre(std::string titre){
              	Titre = titre;
 			 }
 			 
-             std::string getTitre(){
+             std::string Fichier::getTitre(){
              	return Titre;
 			 }
 			 
-             std::string getCorps(){
+             std::string Fichier::getCorps(){
              	return Corps;
 			 }
 			 
