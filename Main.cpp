@@ -1,10 +1,12 @@
 #include <windows.h>
 #include <stdio.h>
 #include "constantes.h"
+//#include "Systeme.cpp"
 
 
 HINSTANCE instance;
 HWND hEdit[2];
+using namespace std;
 
 
 LRESULT CALLBACK procedureFenetrePrincipale(HWND, UINT, WPARAM, LPARAM);
@@ -28,6 +30,7 @@ int WinMain (HINSTANCE cetteInstance, HINSTANCE precedenteInstance,
 LPSTR lignesDeCommande, int modeDAffichage)
 {
     HWND fenetrePrincipale;
+    HWND hWndEdit[2];
     MSG message;
     WNDCLASS classeFenetre;
     instance = cetteInstance;
@@ -54,7 +57,7 @@ LPSTR lignesDeCommande, int modeDAffichage)
     {
         TranslateMessage(&message);
         DispatchMessage(&message);
-    }
+    }  
     return message.wParam;
 }
 LRESULT CALLBACK procedureFenetrePrincipale(HWND fenetrePrincipale, UINT message, WPARAM wParam, LPARAM lParam)
@@ -65,15 +68,15 @@ LRESULT CALLBACK procedureFenetrePrincipale(HWND fenetrePrincipale, UINT message
     {
         case WM_CREATE:
                // hEdit[0]=afficheEditUneLigne(fenetrePrincipale);
-                boutons[0] = CreateWindow("BUTTON", "Connexion", WS_CHILD | WS_VISIBLE,
-        						800, 550, 320, 30, fenetrePrincipale, (HMENU)ID_B_PARLER, instance, NULL);
+                boutons[0] = CreateWindow("BUTTON", "Connexion", WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+        						800, 550, 320, 30, fenetrePrincipale, (HMENU)CONNEXION, instance, NULL);
                 boutons[1] = CreateWindow("BUTTON", "Quitter Arche", WS_CHILD | WS_VISIBLE,
        							 800, 630, 320, 30, fenetrePrincipale, (HMENU)ID_B_QUITTER, instance, NULL);
         	    hWndEdit[0] =  CreateWindowEx(WS_EX_CLIENTEDGE, TEXT("Edit"), TEXT("Identifiant"),
                                WS_CHILD | WS_VISIBLE, 880, 430, 150,
                                30, fenetrePrincipale, NULL, NULL, NULL);
             	hWndEdit[1] =  CreateWindowEx(WS_EX_CLIENTEDGE, TEXT("Edit"), TEXT("Mot de Passe"),
-                               WS_CHILD | WS_VISIBLE, 880, 480, 150,
+                               WS_CHILD | WS_VISIBLE | ES_PASSWORD, 880, 480, 150,
                                30, fenetrePrincipale, NULL, NULL, NULL);
             return 0;
         case WM_COMMAND:
@@ -82,17 +85,26 @@ LRESULT CALLBACK procedureFenetrePrincipale(HWND fenetrePrincipale, UINT message
                 case ID_B_APROPOS:
                     DialogBox(instance, "APROPOS", fenetrePrincipale, (DLGPROC)aPropos_procedure);
                     break;
-                case ID_B_PARLER:
+                /*case ID_B_PARLER:
                     MessageBox(fenetrePrincipale, "Aucun Fichier à déposer", "Alerte !", MB_ICONINFORMATION);
-                    break;
+                    break;*/
                 case ID_B_QUITTER:
                     SendMessage(fenetrePrincipale, WM_DESTROY, 0, 0);
                     break;
+                case CONNEXION:
+                	char Buff[256];
+                	char Buff2[256];
+                //	string identifiant = GetWindowText(hWndEdit[0], Buff, 256);
+                //	string mdp = GetWindowText(hWndEdit[1], Buff2, 256);
+                //	if(Systeme::identifierPersonne(identfiant,mdp)){
+                //		CreateWindow("classeF", "Arche Univ 2014 !", WS_OVERLAPPEDWINDOW,
+                 //                  CW_USEDEFAULT, CW_USEDEFAULT, 0, 0,
+                //                                   NULL, NULL, NULL, NULL);
+                //	}
             }
             return 0;
         case WM_DESTROY:
-            PostQuitMessage(0);
-            return 0;
+            PostQuitMessage(EXIT_SUCCESS);
         
         case WM_PAINT :
         	{
@@ -115,7 +127,7 @@ LRESULT CALLBACK procedureFenetrePrincipale(HWND fenetrePrincipale, UINT message
             //  hbRed = CreateSolidBrush(0x000000FF);
              // hbrOld = SelectObject(hdc,hbRed);
 
-              Rectangle(hdc, 160, 60, 260, 100);
+            //  Rectangle(hdc, 160, 60, 260, 100);
 
              // hbGreen = CreateHatchBrush(HS_DIAGCROSS, 0x0000BB00);
              // SelectObject(hdc,hbGreen);
