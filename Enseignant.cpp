@@ -4,7 +4,7 @@
 #include "Cours.h"
 #include "IPersonne.h"
 #include <vector>
-#include<string>
+
 
 
 using namespace std;
