@@ -22,7 +22,7 @@ class Cours{
              std::vector<IRessource> getListRessource();
              void supprimerRessource(IRessource);
              std::vector<Eleve> getListeEtudiant();
-             void setTitre(std::string nom);
+             void setTitre(std::string titre);
              void setNombreDePlace(int nb_place);
              void setDateDebut(std::time_t date);
              void setDateFin(std::time_t date);
