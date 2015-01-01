@@ -41,7 +41,8 @@ bool Ouvert;
 			 }
 			 
              std::vector<IRessource> getListRessource(){
-             	
+             	  vector<IRessource> ListeRessource;
+                  return ListeRessource;
 			 }
 			 
              void supprimerRessource(IRessource){
@@ -49,7 +50,8 @@ bool Ouvert;
 			 }
 			 
              std::vector<Eleve> getListeEtudiant(){
-             	
+             	 vector<Eleve> ListeEtudiant;
+                return ListeEtudiant;
 			 }
 			 
              void setTitre(std::string titre){
