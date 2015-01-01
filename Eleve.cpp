@@ -65,5 +65,5 @@ std::vector<Cours> liste_cours_ouvert;
 		  }
 		  
           void supprimerCoursOuvert(Cours cours){
-          	
+          	liste_cours_ouvert.pop_back(cours);
 		  }
