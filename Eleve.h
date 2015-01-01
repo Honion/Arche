@@ -17,6 +17,7 @@ class Eleve{
           Cours getCours(std::string cours);
           std::vector<Cours> getCoursOuvert();
           void ajouterNotif(Note n);
+            std::string getMdp();
           void setMdp(std::string mdp);
           std::string getIdentifiant();
           void setIdentifiant(std::string id);
