@@ -1,3 +1,6 @@
+#ifndef __Url_H__
+#define __Url_H__
+
 
 using namespace std;
 
@@ -14,3 +17,5 @@ class Url{
              std::string Adresse;
              
 };
+
+#endif

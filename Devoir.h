@@ -1,4 +1,9 @@
+#ifndef __Devoir_H__
+#define __Devoir_H__
+
+
 #include <ctime>
+
 using namespace std;
 
 class Devoir
@@ -19,4 +24,4 @@ class Devoir
                 std::string Enonce;
                 time_t DateLimite;
 };
-       
+#endif   

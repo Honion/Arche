@@ -1,3 +1,5 @@
+#ifndef __Fichier_H__
+#define __Fichier_H__
 
 using namespace std;
 
@@ -15,3 +17,5 @@ class Fichier{
               std::string Corps;
               
 };
+
+#endif
