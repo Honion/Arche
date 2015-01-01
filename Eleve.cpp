@@ -4,9 +4,65 @@
 #include <vector>
 
 using namespace std;
+std::string Identifiant;
+std::string Mdp;
+std::vector<Cours> liste_cours;
 
   vector<Cours> Eleve::getCoursOuvert()
   {             
                 vector<Cours> a;
                 return a;
   }
+  
+   void connexion(bool a){
+          	
+		  }
+		  
+          std::vector<Cours> identifierCoursOuvert(std::string cours_ouvert){
+          	
+		  }
+		  
+          std::vector<Cours> identifierCours(std::string cours){
+          	
+		  }
+		  
+          Cours getCours(std::string cours){
+          	
+		  }
+		  
+          std::vector<Cours> getCoursOuvert(){
+          	vector<Cours> ListeCoursOuvert;
+                  return ListeCoursOuvert;
+		  }
+		  
+          void ajouterNotif(Note n){
+          	
+		  }
+		  
+		     std::string getMdp(){
+		     	return Mdp;
+			 }
+		  
+          void setMdp(std::string mdp){
+          	Mdp = mdp;
+		  }
+		  
+          std::string getIdentifiant(){
+          	return Identifiant;
+		  }
+		  
+          void setIdentifiant(std::string id){
+          	Identifiant = id;
+		  }
+		  
+          void ajouterCours(Cours cours){
+          	 liste_cours.push_back(cours);
+		  }
+		  
+          void ajouterCoursOuvert(Cours cours){
+          	
+		  }
+		  
+          void supprimerCoursOuvert(Cours cours){
+          	
+		  }
