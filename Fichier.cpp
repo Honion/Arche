@@ -2,6 +2,7 @@
 #include<list>
 #include<iostream>
 #include"Fichier.h"
+#include<string>
 
 using namespace std;
 std::string Titre;
