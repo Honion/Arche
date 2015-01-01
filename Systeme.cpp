@@ -38,7 +38,7 @@ using namespace std;
       
       Cours Systeme::getCours(string cours)
       {
-            
+            return liste_cours;
       }
       
       IPersonne Systeme::getPersonne(string nom)
