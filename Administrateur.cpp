@@ -2,7 +2,7 @@
 #include<list>
 #include<iostream>
 #include"Administrateur.h"
-
+#include<vector>
 
 using namespace std;
 std::string Identifiant;
