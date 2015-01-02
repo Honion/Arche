@@ -9,7 +9,7 @@ class Administrateur{
              void setIdentifiant(std::string id);
              std::string getMdp();
              void setMdp(std::string mdp);
-             void ajouterCours();
+             void ajouterCours(Cours cours);
       
       protected:
              std::string Identifiant;
