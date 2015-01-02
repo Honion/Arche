@@ -38,6 +38,9 @@ class Cours{
              void ajouterNote(Eleve eleve, Note note);
              
       protected:
+      			std::vector<Eleve> Liste_eleve;
+      			std::vector<Eleve> Liste_eleve_attente;
+      			std::vector<IRessource> Liste_ressource;
                 std::string Titre;
                 int NombreDePlace;
                 std::time_t DateDebut;

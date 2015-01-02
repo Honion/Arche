@@ -1,4 +1,5 @@
-
+#ifndef __Note_H__
+#define __Note_H__
 
 
 class Note{
@@ -9,3 +10,5 @@ class Note{
       protected:
               int note;
 };
+
+#endif

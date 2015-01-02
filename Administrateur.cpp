@@ -3,7 +3,6 @@
 #include<iostream>
 #include"Administrateur.h"
 #include"Cours.h"
-#include<vector>
 
 
 using namespace std;
@@ -29,5 +28,5 @@ std::vector<Cours> liste_cours;
 			 }
 			 
                 void ajouterCours(Cours cours){
-          	 liste_cours.push_back(cours);
+          	 	liste_cours.push_back(cours);
 		  }

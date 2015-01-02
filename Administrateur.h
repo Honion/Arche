@@ -1,4 +1,8 @@
+#ifndef __Administrateur_H__
+#define __Administrateur_H__
+
 #include<string>
+#include<vector>
 
 class Cours;
 class IPersonne;
@@ -18,3 +22,5 @@ class Administrateur{
              std::string Mdp;
 
 };
+
+#endif

@@ -5,19 +5,19 @@
 #include "IRessource.h"
 
 using namespace std;
-std::string Titre;
+/*std::string Titre;
 int NombreDePlace;
 std::time_t DateDebut;
 std::time_t DateFin;
-bool Ouvert;
+bool Ouvert;*/
 
 
   			void inscrire(Eleve eleve){
-  				
+  				liste_eleve.push_back(eleve);
 			  }
 			  
              void inscrireAttente(Eleve eleve){
-             	
+             	liste_eleve_attente.push_back(eleve);
 			 }
 			 
              void desinscrire(Eleve eleve){
@@ -41,8 +41,7 @@ bool Ouvert;
 			 }
 			 
              std::vector<IRessource> getListRessource(){
-             	  vector<IRessource> ListeRessource;
-                  return ListeRessource;
+                  return Liste_ressource;
 			 }
 			 
              void supprimerRessource(IRessource){
@@ -50,8 +49,7 @@ bool Ouvert;
 			 }
 			 
              std::vector<Eleve> getListeEtudiant(){
-             	 vector<Eleve> ListeEtudiant;
-                return ListeEtudiant;
+                return Liste_eleve;
 			 }
 			 
              void setTitre(std::string titre){
