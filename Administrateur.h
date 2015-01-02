@@ -1,5 +1,7 @@
 #include<string>
 
+class Cours;
+class IPersonne;
 
 class Administrateur{
       
