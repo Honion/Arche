@@ -38,11 +38,7 @@ std::vector<Cours> liste_cours_ouvert;
           std::vector<Cours> getCoursOuvert(){
           	vector<Cours> ListeCoursOuvert;
                   return ListeCoursOuvert;
-		  }
-		  
-          void ajouterNotif(Note n){
-          	
-		  }
+          }
 		  
 		     std::string getMdp(){
 		     	return Mdp;
