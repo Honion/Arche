@@ -1,7 +1,10 @@
 #ifndef __ENSEIGNANT_H__
 #define __ENSEIGNANT_H__
-#include "Cours.h"
-#include "IPersonne.h"
+
+#include <string>
+#include <vector>
+
+class Cours;
 
 
 

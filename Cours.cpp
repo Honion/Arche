@@ -5,106 +5,102 @@
 #include "IRessource.h"
 
 using namespace std;
-/*std::string Titre;
-int NombreDePlace;
-std::time_t DateDebut;
-std::time_t DateFin;
-bool Ouvert;*/
 
 
-  			void inscrire(Eleve eleve){
+
+  			void Cours::inscrire(Eleve eleve){
   				liste_eleve.push_back(eleve);
 			  }
 			  
-             void inscrireAttente(Eleve eleve){
+             void Cours::inscrireAttente(Eleve eleve){
              	liste_eleve_attente.push_back(eleve);
 			 }
 			 
-             void desinscrire(Eleve eleve){
+             void Cours::desinscrire(Eleve eleve){
              	
 			 }
 			 
-             bool ressourceCorrecte(IRessource ressource){
+             bool Cours::ressourceCorrecte(IRessource ressource){
              	
 			 }
 			 
-             void ajouterRessource(IRessource ressource){
+             void Cours::ajouterRessource(IRessource ressource){
              	
 			 }
 			 
-             IRessource getRessource(std::string ressource){
+             IRessource Cours::getRessource(std::string ressource){
              	
 			 }
 			 
-             Note getNote(Eleve eleve){
+             Note Cours::getNote(Eleve eleve){
              	
 			 }
 			 
-             std::vector<IRessource> getListRessource(){
+             std::vector<IRessource> Cours::getListRessource(){
                   return Liste_ressource;
 			 }
 			 
-             void supprimerRessource(IRessource){
+             void Cours::supprimerRessource(IRessource){
              	
 			 }
 			 
-             std::vector<Eleve> getListeEtudiant(){
+             std::vector<Eleve> Cours::getListeEtudiant(){
                 return Liste_eleve;
 			 }
 			 
-             void setTitre(std::string titre){
+             void Cours::setTitre(std::string titre){
              	Titre = titre;
 			 }
 			 
-             void setNombreDePlace(int nb_place){
+             void Cours::setNombreDePlace(int nb_place){
              	NombreDePlace = nb_place;
 			 }
 			 
-             void setDateDebut(std::time_t date){
+             void Cours::setDateDebut(std::time_t date){
              	DateDebut = date;
 			 }
 			 
-             void setDateFin(std::time_t date){
+             void Cours::setDateFin(std::time_t date){
              	DateFin = date;             	
 			 }
 			 
-             void setOuvert(bool ouvert){
+             void Cours::setOuvert(bool ouvert){
              	Ouvert = ouvert;
 			 }
 			 
-             std::string getTitre(){
+             std::string Cours::getTitre(){
              	return Titre;
 			 }
 			 
-             int getNombreDePlace(){
+             int Cours::getNombreDePlace(){
              	return NombreDePlace;
 			 }
 			 
-             std::time_t getDateDebut(){
+             std::time_t Cours::getDateDebut(){
              	return DateDebut;
 			 }
 			 
-             std::time_t getDateFin(){
+             std::time_t Cours::getDateFin(){
              	return DateFin;
 			 }
 			 
-             bool getOuvert(){
+             bool Cours::getOuvert(){
              	return Ouvert;
 			 }
 			 
-             Eleve getEleve(std::string){
+             Eleve Cours::getEleve(std::string){
              	
 			 }
 			 
-             int getNombreInscrit(){
+             int Cours::getNombreInscrit(){
              	
 			 }
 			 
-             bool courComplet(){
+             bool Cours::courComplet(){
              	
 			 }
 			 
-             void ajouterNote(Eleve eleve, Note note){
+             void Cours::ajouterNote(Eleve eleve, Note note){
              	
 			 }
     

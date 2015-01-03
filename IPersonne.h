@@ -2,18 +2,18 @@
 #define __IPersonne_H__
 #include<string>
 
-class Eleve;
+//class Eleve;
 class Enseignant;
-class Administrateur;
-class Cours;
+//class Administrateur;
+//class Cours;
 
 class IPersonne{
          public:
-      	IPersonne();
-    	 std::string getIdentifiant();
-    	void setIdentifiant(std::string id);
-        std::string getMdp();
-        void setMdp(std::string mdp);
+      		 IPersonne();
+    		 std::string getIdentifiant();
+    	   	void setIdentifiant(std::string id);
+       		 std::string getMdp();
+       		 void setMdp(std::string mdp);
         
         
         protected:

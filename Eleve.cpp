@@ -1,69 +1,63 @@
+#include "Eleve.h"
 #include<string>
 #include<list>
 #include<iostream>
-#include "Eleve.h"
 #include "Cours.h"
 #include "Note.h"
-#include <vector>
-#include<string>
 
 using namespace std;
-std::string Identifiant;
-std::string Mdp;
-std::vector<Cours> liste_cours;
-std::vector<Cours> liste_cours_ouvert;
 
-  vector<Cours> Eleve::getCoursOuvert()
-  {             
+  		vector<Cours> Eleve::getCoursOuvert()
+  		{             
                 vector<Cours> a;
                 return a;
-  }
+ 		 }
   
-   void connexion(bool a){
+  		 void Eleve::connexion(bool a){
           	
 		  }
 		  
-          std::vector<Cours> identifierCoursOuvert(std::string cours_ouvert){
+          std::vector<Cours> Eleve::identifierCoursOuvert(std::string cours_ouvert){
           	
 		  }
 		  
-          std::vector<Cours> identifierCours(std::string cours){
+          std::vector<Cours> Eleve::identifierCours(std::string cours){
           	
 		  }
 		  
-          Cours getCours(std::string cours){
+          Cours Eleve::getCours(std::string cours){
           	
 		  }
 		  
-          std::vector<Cours> getCoursOuvert(){
+          std::vector<Cours> Eleve::getCoursOuvert(){
           	vector<Cours> ListeCoursOuvert;
                   return ListeCoursOuvert;
           }
 		  
-		     std::string getMdp(){
+		     std::string Eleve::getMdp(){
 		     	return Mdp;
 			 }
 		  
-          void setMdp(std::string mdp){
+          void Eleve::setMdp(std::string mdp){
           	Mdp = mdp;
 		  }
 		  
-          std::string getIdentifiant(){
+          std::string Eleve::getIdentifiant(){
           	return Identifiant;
 		  }
 		  
-          void setIdentifiant(std::string id){
+          void Eleve::setIdentifiant(std::string id){
           	Identifiant = id;
 		  }
 		  
-          void ajouterCours(Cours cours){
+          void Eleve::ajouterCours(Cours cours){
           	 liste_cours.push_back(cours);
 		  }
 		  
-          void ajouterCoursOuvert(Cours cours){
+          void Eleve::ajouterCoursOuvert(Cours cours){
           	liste_cours_ouvert.push_back(cours);
 		  }
 		  
-          void supprimerCoursOuvert(Cours cours){
+          void Eleve::supprimerCoursOuvert(Cours cours){
           	liste_cours_ouvert.pop_back();
 		  }

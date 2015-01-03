@@ -2,7 +2,7 @@
 #define __COURS_H__
 #include <ctime>
 #include <vector>
-#include<string>
+#include <string>
 
 class Eleve;
 class Enseignant;

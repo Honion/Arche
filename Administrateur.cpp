@@ -1,32 +1,29 @@
+#include "Administrateur.h"
+#include "Cours.h"
 #include<string>
 #include<list>
 #include<iostream>
-#include"Administrateur.h"
-#include"Cours.h"
 
 
 using namespace std;
-std::string Identifiant;
-std::string Mdp;
-std::vector<Cours> liste_cours;
 
 
-            std::string getIdentifiant(){
+            std::string Administrateur::getIdentifiant(){
             	return Identifiant;
 			}
 			
-             void setIdentifiant(std::string id){
+             void Administrateur::setIdentifiant(std::string id){
              	Identifiant = id;
 			 }
 			 
-             std::string getMdp(){
+             std::string Administrateur::getMdp(){
              	return Mdp;
 			 }
 			 
-             void setMdp(std::string mdp){
+             void Administrateur::setMdp(std::string mdp){
              	Mdp = mdp;
 			 }
 			 
-                void ajouterCours(Cours cours){
+             void Administrateur::ajouterCours(Cours cours){
           	 	liste_cours.push_back(cours);
 		  }

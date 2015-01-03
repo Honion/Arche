@@ -1,8 +1,7 @@
 #ifndef __ELEVE_H__
 #define __ELEVE_H__
 #include <vector>
-#include<string>
-#include<vector>
+#include <string>
 
 class Cours;
 class Note;
@@ -28,5 +27,7 @@ class Eleve{
           protected:
           std::string Identifiant;
           std::string Mdp;
+          std::vector<Cours> liste_cours;
+          std::vector<Cours> liste_cours_ouvert;
 };          
 #endif

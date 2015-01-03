@@ -1,7 +1,7 @@
+#include"Devoir.h"
 #include<string>
 #include<list>
 #include<iostream>
-#include"Devoir.h"
 #include<string>
 #include <ctime>
 

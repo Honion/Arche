@@ -1,3 +1,4 @@
+#include "Enseignant.h"
 #include<string>
 #include<list>
 #include<iostream>
@@ -8,27 +9,26 @@
 
 
 using namespace std;
-std::string Identifiant;
-std::string Mdp;
 
-             std::string getMdp(){
+
+             std::string Enseignant::getMdp(){
              	return Mdp;
 			 }
 			 
-             void setMdp(std::string mdp){
+             void Enseignant::setMdp(std::string mdp){
              	Mdp = mdp;
 			 }
 			 
-             std::vector<Cours> getCours(){
+             std::vector<Cours> Enseignant::getCours(){
              		vector<Cours> ListeCours;
                   return ListeCours;
 			 }
 			 
-             std::string getIdentifiant(){
+             std::string Enseignant::getIdentifiant(){
              	return Identifiant;
 			 }
 			 
-             void setIdentifiant(std::string id){
+             void Enseignant::setIdentifiant(std::string id){
              	Identifiant = id;
 			 }
 			

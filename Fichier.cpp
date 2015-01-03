@@ -1,8 +1,7 @@
+#include"Fichier.h"
 #include<string>
 #include<list>
 #include<iostream>
-#include"Fichier.h"
-#include<string>
 
 using namespace std;
 

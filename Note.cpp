@@ -1,18 +1,17 @@
+#include"Note.h"
 #include<string>
 #include<list>
 #include<iostream>
-#include"Note.h"
 
 
 using namespace std;
-int note;
 
 
-  		void setNote(int note){
+  		void Note::setNote(int note){
   			note = note;
   		}
   				
-             	int getNote(){
+             	int Note::getNote(){
              		return note;
 				 }
 
