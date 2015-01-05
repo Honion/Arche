@@ -8,7 +8,17 @@
 using namespace std;
 
 
-           	void Devoir::setEnonce(std::string enonce){
+			Devoir::Devoir(std::string titre, std::string enonce, time_t date)
+			{
+				Titre = titre;
+				Enonce = enonce;
+				DateLimite = date;
+			}
+			Devoir::~Devoir()
+			{
+			}
+
+			void Devoir::setEnonce(std::string enonce){
            		Enonce = enonce;
 			   }
 			   

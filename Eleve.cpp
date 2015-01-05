@@ -7,6 +7,16 @@
 
 using namespace std;
 
+		Eleve::Eleve(std::string id, std::string mdp)
+		{
+			Identifiant = id;
+			Mdp = mdp;
+		}
+
+		Eleve::~Eleve()
+		{
+		}
+
   		vector<Cours> Eleve::getCoursOuvert()
   		{             
                 vector<Cours> a;

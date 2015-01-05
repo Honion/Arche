@@ -12,6 +12,7 @@ class Enseignant : IPersonne{
       
       public:
              Enseignant(std::string id, std::string mdp);
+			 ~Enseignant();
              std::string getMdp();
              void setMdp(std::string mdp);
              std::vector<Cours> getCours();

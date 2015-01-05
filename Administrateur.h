@@ -12,6 +12,7 @@ class Administrateur{
       
       public:
              Administrateur(std::string id, std::string mdp);
+			 ~Administrateur();
              std::string getIdentifiant();
              void setIdentifiant(std::string id);
              std::string getMdp();

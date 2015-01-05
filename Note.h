@@ -4,8 +4,9 @@
 
 class Note{
       public:
-             Note(int note);
-             void setNote(int note);
+             Note(int n);
+			 ~Note();
+             void setNote(int n);
              int getNote();
       protected:
               int note;

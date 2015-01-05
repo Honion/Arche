@@ -12,6 +12,7 @@ class IRessource;
 class Cours{
       public:
              Cours(std::string nom, std::time_t date_debut, std::time_t date_fin, bool ouvert);
+			 ~Cours();
              void inscrire(Eleve eleve);
              void inscrireAttente(Eleve eleve);
              void desinscrire(Eleve eleve);

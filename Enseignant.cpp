@@ -10,6 +10,14 @@
 
 using namespace std;
 
+			Enseignant::Enseignant(std::string id, std::string mdp)
+			{
+				Identifiant = id;
+				Mdp = mdp;
+			}
+			Enseignant::~Enseignant()
+			{
+			}
 
              std::string Enseignant::getMdp(){
              	return Mdp;

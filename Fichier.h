@@ -7,6 +7,7 @@ using namespace std;
 class Fichier{
       public:
              Fichier(std::string titre, std::string corps);
+			 ~Fichier();
              void setCorps(std::string corps);
              void setTitre(std::string titre);
              std::string getTitre();

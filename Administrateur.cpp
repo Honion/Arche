@@ -7,6 +7,15 @@
 
 using namespace std;
 
+			Administrateur::Administrateur(std::string id, std::string mdp)
+			{
+				Identifiant = id;
+				Mdp = mdp;
+			}
+
+			Administrateur::~Administrateur()
+			{
+			}
 
             std::string Administrateur::getIdentifiant(){
             	return Identifiant;

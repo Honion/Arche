@@ -10,6 +10,7 @@ class Eleve{
       
       public:
           Eleve(std::string id, std::string mdp);
+		  ~Eleve();
           void connexion(bool a);
           std::vector<Cours> identifierCoursOuvert(std::string cours_ouvert);
           std::vector<Cours> identifierCours(std::string cours);

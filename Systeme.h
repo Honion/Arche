@@ -10,6 +10,7 @@ class Systeme{
       
       public:
              Systeme();
+			 ~Systeme();
              bool identifierPersonne(std::string id, std::string mdp);
              std::vector<Cours> identifierCoursOuvert(Eleve a);
              std::vector<Cours> identifierCours(IPersonne a);

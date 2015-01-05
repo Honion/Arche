@@ -10,6 +10,7 @@ class Devoir
 {
       public:
              Devoir(std::string titre, std::string enonce, time_t date);
+			 ~Devoir();
              void setEnonce(std::string enonce);
              void setTitre(std::string titre);
              std::string getTitre();

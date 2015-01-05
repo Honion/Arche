@@ -6,7 +6,19 @@
 
 using namespace std;
 
+			Cours::Cours(std::string nom, int nombre, time_t date_debut, time_t date_fin, bool ouvert)
+			{
+				Titre = nom;
+				NombreDePlace = nombre;
+				DateDebut = date_debut;
+				DateFin = date_fin;
+				Ouvert = ouvert;
+			}
 
+
+			Cours::~Cours()
+			{
+			}
 
   			void Cours::inscrire(Eleve eleve){
   				liste_eleve.push_back(eleve);

@@ -6,9 +6,17 @@
 
 using namespace std;
 
+		Note::Note(int n)
+		{
+			note = n;
+		}
 
-  		void Note::setNote(int note){
-  			note = note;
+		Note::~Note()
+		{
+}
+
+  		void Note::setNote(int n){
+  			note = n;
   		}
   				
              	int Note::getNote(){

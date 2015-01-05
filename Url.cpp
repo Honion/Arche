@@ -6,8 +6,17 @@
 
 using namespace std; 
  
+				Url::Url(std::string titre, std::string adresse)
+				{
+					Titre = titre;
+					Adresse = adresse;
+				}
+
+				~Url()
+				{
+				}
  
-  				void Url::setAdresse(std::string adresse){
+				void Url::setAdresse(std::string adresse){
   					Adresse=adresse;
   				}
   
