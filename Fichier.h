@@ -1,5 +1,6 @@
 #ifndef __Fichier_H__
 #define __Fichier_H__
+#include <string>
 
 using namespace std;
 

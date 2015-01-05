@@ -26,7 +26,7 @@ using namespace std;
   		 void Eleve::connexion(bool a){
           	
 		  }
-		  
+		 /*
           std::vector<Cours> Eleve::identifierCoursOuvert(std::string cours_ouvert){
           	
 		  }
@@ -38,11 +38,13 @@ using namespace std;
           Cours Eleve::getCours(std::string cours){
           	
 		  }
-		  
+		  */
+		  /*
           std::vector<Cours> Eleve::getCoursOuvert(){
           	vector<Cours> ListeCoursOuvert;
                   return ListeCoursOuvert;
           }
+		  */
 		  
 		     std::string Eleve::getMdp(){
 		     	return Mdp;

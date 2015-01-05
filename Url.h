@@ -1,6 +1,6 @@
 #ifndef __Url_H__
 #define __Url_H__
-
+#include<string>
 
 using namespace std;
 

@@ -8,7 +8,7 @@ class Cours;
 
 
 
-class Enseignant : IPersonne{
+class Enseignant{
       
       public:
              Enseignant(std::string id, std::string mdp);

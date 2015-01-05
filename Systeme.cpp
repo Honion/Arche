@@ -29,7 +29,7 @@ using namespace std;
 		{
 			return (a>=0 && a<=20) ;
 		}
-      
+		/*
 		vector<Cours> Systeme::identifierCours(IPersonne a)
 		{
                   
@@ -39,17 +39,18 @@ using namespace std;
 		{
 				return cours_attente;  
 		}
-      
+      */
 		Cours Systeme::getCours(string cours)
 		{
-			return liste_cours;
+			return liste_cours[0];
 		}
       
+		/*
 		IPersonne Systeme::getPersonne(string nom)
 		{
       
 		}
-      
+      */
 		void Systeme::ajouterCoursEnAttente(Cours cours)
 		{
 			cours_attente.push_back(cours);

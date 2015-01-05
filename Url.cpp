@@ -12,7 +12,7 @@ using namespace std;
 					Adresse = adresse;
 				}
 
-				~Url()
+				Url::~Url()
 				{
 				}
  

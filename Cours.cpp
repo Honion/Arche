@@ -6,10 +6,9 @@
 
 using namespace std;
 
-			Cours::Cours(std::string nom, int nombre, time_t date_debut, time_t date_fin, bool ouvert)
+			Cours::Cours(std::string nom, time_t date_debut, time_t date_fin, bool ouvert)
 			{
 				Titre = nom;
-				NombreDePlace = nombre;
 				DateDebut = date_debut;
 				DateFin = date_fin;
 				Ouvert = ouvert;
@@ -19,13 +18,13 @@ using namespace std;
 			Cours::~Cours()
 			{
 			}
-
+			/*
   			void Cours::inscrire(Eleve eleve){
-  				liste_eleve.push_back(eleve);
+  				Liste_eleve.push_back(eleve);
 			  }
 			  
              void Cours::inscrireAttente(Eleve eleve){
-             	liste_eleve_attente.push_back(eleve);
+             	Liste_eleve_attente.push_back(eleve);
 			 }
 			 
              void Cours::desinscrire(Eleve eleve){
@@ -33,19 +32,19 @@ using namespace std;
 			 }
 			 
              bool Cours::ressourceCorrecte(IRessource ressource){
-             	
+				 return false;
 			 }
 			 
              void Cours::ajouterRessource(IRessource ressource){
              	
 			 }
 			 
-             IRessource Cours::getRessource(std::string ressource){
+/*             IRessource Cours::getRessource(std::string ressource){
              	
 			 }
-			 
-             Note Cours::getNote(Eleve eleve){
-             	
+	
+             Note Cours::getNote(Eleve eleve)
+			 {
 			 }
 			 
              std::vector<IRessource> Cours::getListRessource(){
@@ -59,7 +58,7 @@ using namespace std;
              std::vector<Eleve> Cours::getListeEtudiant(){
                 return Liste_eleve;
 			 }
-			 
+			 */
              void Cours::setTitre(std::string titre){
              	Titre = titre;
 			 }
@@ -100,16 +99,17 @@ using namespace std;
              	return Ouvert;
 			 }
 			 
+			 /*
              Eleve Cours::getEleve(std::string){
              	
 			 }
-			 
+			 */
              int Cours::getNombreInscrit(){
-             	
+				 return NombreDePlace;
 			 }
 			 
              bool Cours::courComplet(){
-             	
+				 return Ouvert;
 			 }
 			 
              void Cours::ajouterNote(Eleve eleve, Note note){
