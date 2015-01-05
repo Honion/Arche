@@ -69,15 +69,30 @@ LRESULT CALLBACK procedureFenetrePrincipale(HWND fenetrePrincipale, UINT message
         case WM_CREATE:
                // hEdit[0]=afficheEditUneLigne(fenetrePrincipale);
                 boutons[0] = CreateWindow("BUTTON", "Connexion", WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
-        						800, 550, 320, 30, fenetrePrincipale, (HMENU)CONNEXION, instance, NULL);
+        						400, 275, 320, 30, fenetrePrincipale, (HMENU)CONNEXION, instance, NULL);
                 boutons[1] = CreateWindow("BUTTON", "Quitter Arche", WS_CHILD | WS_VISIBLE,
-       							 800, 630, 320, 30, fenetrePrincipale, (HMENU)ID_B_QUITTER, instance, NULL);
+       							 400, 315, 320, 30, fenetrePrincipale, (HMENU)ID_B_QUITTER, instance, NULL);
         	    hWndEdit[0] =  CreateWindowEx(WS_EX_CLIENTEDGE, TEXT("Edit"), TEXT("Identifiant"),
-                               WS_CHILD | WS_VISIBLE, 880, 430, 150,
+                               WS_CHILD | WS_VISIBLE, 440, 215, 150,
                                30, fenetrePrincipale, NULL, NULL, NULL);
             	hWndEdit[1] =  CreateWindowEx(WS_EX_CLIENTEDGE, TEXT("Edit"), TEXT("Mot de Passe"),
-                               WS_CHILD | WS_VISIBLE | ES_PASSWORD, 880, 480, 150,
+                               WS_CHILD | WS_VISIBLE | ES_PASSWORD, 440, 240, 150,
                                30, fenetrePrincipale, NULL, NULL, NULL);
+                boutons[3] = CreateWindow("BUTTON", "Deposer Ressource", WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+        						780, 175, 200, 100, fenetrePrincipale, (HMENU)COURS, instance, NULL);
+        			boutons[4] = CreateWindow("BUTTON", "Supprimer Ressource", WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+        						780, 275, 200, 100, fenetrePrincipale, (HMENU)COURS, instance, NULL);
+        			boutons[5] = CreateWindow("BUTTON", "Inscription à un cours", WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+        						780, 375, 200, 100, fenetrePrincipale, (HMENU)COURS, instance, NULL);
+        			boutons[6] = CreateWindow("BUTTON", "Desinscription à un cours", WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+        						780, 475, 200, 100, fenetrePrincipale, (HMENU)COURS, instance, NULL);
+        			boutons[7] = CreateWindow("BUTTON", "Mon dossier", WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+        						780, 75, 200, 100, fenetrePrincipale, (HMENU)COURS, instance, NULL);
+        			ShowWindow(boutons[3],0);
+        			ShowWindow(boutons[4],0);
+        			ShowWindow(boutons[5],0);
+        			ShowWindow(boutons[6],0);
+        			ShowWindow(boutons[7],0);
             return 0;
         case WM_COMMAND:
             switch(LOWORD(wParam))
@@ -92,8 +107,28 @@ LRESULT CALLBACK procedureFenetrePrincipale(HWND fenetrePrincipale, UINT message
                     SendMessage(fenetrePrincipale, WM_DESTROY, 0, 0);
                     break;
                 case CONNEXION:
-                	char Buff[256];
-                	char Buff2[256];
+                	ShowWindow(hWndEdit[0],0);
+                	ShowWindow(boutons[0],0);
+        		/*	boutons[3] = CreateWindow("BUTTON", "Deposer Ressource", WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+        						780, 175, 200, 100, fenetrePrincipale, (HMENU)COURS, instance, NULL);
+        			boutons[4] = CreateWindow("BUTTON", "Supprimer Ressource", WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+        						780, 275, 200, 100, fenetrePrincipale, (HMENU)COURS, instance, NULL);
+        			boutons[5] = CreateWindow("BUTTON", "Inscription à un cours", WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+        						780, 375, 200, 100, fenetrePrincipale, (HMENU)COURS, instance, NULL);
+        			boutons[6] = CreateWindow("BUTTON", "Desinscription à un cours", WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+        						780, 475, 200, 100, fenetrePrincipale, (HMENU)COURS, instance, NULL);
+        			boutons[7] = CreateWindow("BUTTON", "Mon dossier", WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON,
+        						780, 75, 200, 100, fenetrePrincipale, (HMENU)COURS, instance, NULL); */
+        			ShowWindow(boutons[3],5);
+        			ShowWindow(boutons[4],5);
+        			ShowWindow(boutons[5],5);
+        			ShowWindow(boutons[6],5);
+        			ShowWindow(boutons[7],5);
+        		case COURS:
+        			ShowWindow(boutons[7],5);
+        			
+
+
                 //	string identifiant = GetWindowText(hWndEdit[0], Buff, 256);
                 //	string mdp = GetWindowText(hWndEdit[1], Buff2, 256);
                 //	if(Systeme::identifierPersonne(identfiant,mdp)){
@@ -135,11 +170,11 @@ LRESULT CALLBACK procedureFenetrePrincipale(HWND fenetrePrincipale, UINT message
 
             //  Ellipse(hdc, 300, 20, 400, 120);
 
-              MoveToEx(hdc, 780, 400, NULL);
-              LineTo(hdc, 1130, 400);
+              MoveToEx(hdc, 480, 200, NULL);
+              LineTo(hdc, 600, 200);
               
-              MoveToEx(hdc, 780, 700, NULL);
-              LineTo(hdc, 1130, 700);
+              MoveToEx(hdc, 480, 350, NULL);
+              LineTo(hdc, 600, 350);
 
              // SelectObject(hdc,hbrOld);
             //  DeleteObject(hbGreen);
@@ -152,7 +187,7 @@ LRESULT CALLBACK procedureFenetrePrincipale(HWND fenetrePrincipale, UINT message
              // OldFont = SelectObject(hdc,NewFont);
 
               SetTextColor(hdc, 0x000000FF);
-              TextOut(hdc, 880, 180, st, lstrlen(st));
+              TextOut(hdc, 490, 90, st, lstrlen(st));
 
             //  SelectObject(hdc,OldFont);
            //   DeleteObject(NewFont);
